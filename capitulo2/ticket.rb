@@ -1,3 +1,5 @@
+#Creando un objeto e imprimirlo en pantalla
+
 ticket = Object.new
 
 def ticket.date
@@ -29,3 +31,5 @@ print "The seat is "
 print ticket.seat + ", "
 print "and it costs $"
 puts "%.2f." % ticket.price
+
+#interpolacion de cadena
