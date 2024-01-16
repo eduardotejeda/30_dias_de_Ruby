@@ -23,7 +23,7 @@ class Ticket
             @date
         end
 
-        
+
         
 end
 
