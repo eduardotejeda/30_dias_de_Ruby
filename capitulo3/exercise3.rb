@@ -9,6 +9,28 @@
 # Output:
 # The ticket for Town Hall has been discounted 15% to $85.00.
 
+class Ticket
+    def initialize(price, venue)
+        @price = price
+        @venue = venue        
+    end
+    def price
+        @price
+        end
+    def venue
+        @venue
+        end
+    def discount(percent)
+        @price = @price * (100 - percent) / 100.0
+        end
+end
+
+
+
+
+puts "The ticket for #{th.venue} has been discounted 15% to
+# #{th.discount(15)}."
+
 # 2
 # Modify the initialize method of your Ticket object so that it only accepts a
 # venue. Then create a date= method like the price= method explained above.
