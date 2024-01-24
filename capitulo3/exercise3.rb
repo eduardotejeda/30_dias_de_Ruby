@@ -25,11 +25,11 @@ class Ticket
         end
 end
 
+th = Ticket.new(100, "Malecon") 
+puts "#{'%.2f' % th.price} #{th.venue}"
 
 
-
-puts "The ticket for #{th.venue} has been discounted 15% to
-# #{th.discount(15)}."
+puts "The ticket for #{th.venue} has been discounted 15% to #{'%.2f' % th.discount(15)}."
 
 # 2
 # Modify the initialize method of your Ticket object so that it only accepts a
@@ -42,3 +42,16 @@ puts "The ticket for #{th.venue} has been discounted 15% to
 # => "2013-11-12"
 # ticket.date = "13-11-12"
 # => Please submit the date in the format 'yyyy-mm-dd'.
+
+
+class Ticket
+    def initialize(venue)        
+        @venue = venue        
+    end
+    def date(date)
+        @date
+        end
+    def venue
+        @venue
+        end    
+end
