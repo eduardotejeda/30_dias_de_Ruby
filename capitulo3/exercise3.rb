@@ -9,27 +9,27 @@
 # Output:
 # The ticket for Town Hall has been discounted 15% to $85.00.
 
-class Ticket
-    def initialize(price, venue)
-        @price = price
-        @venue = venue        
-    end
-    def price
-        @price
-        end
-    def venue
-        @venue
-        end
-    def discount(percent)
-        @price = @price * (100 - percent) / 100.0
-        end
-end
+# class Ticket
+#     def initialize(price, venue)
+#         @price = price
+#         @venue = venue        
+#     end
+#     def price
+#         @price
+#         end
+#     def venue
+#         @venue
+#         end
+#     def discount(percent)
+#         @price = @price * (100 - percent) / 100.0
+#         end
+# end
 
-th = Ticket.new(100, "Malecon") 
-puts "#{'%.2f' % th.price} #{th.venue}"
+# th = Ticket.new(100, "Malecon") 
+# puts "#{'%.2f' % th.price} #{th.venue}"
 
 
-puts "The ticket for #{th.venue} has been discounted 15% to #{'%.2f' % th.discount(15)}."
+# puts "The ticket for #{th.venue} has been discounted 15% to #{'%.2f' % th.discount(15)}."
 
 # 2
 # Modify the initialize method of your Ticket object so that it only accepts a
@@ -47,11 +47,9 @@ puts "The ticket for #{th.venue} has been discounted 15% to #{'%.2f' % th.discou
 class Ticket
     def initialize(venue)        
         @venue = venue        
-    end
-    def date(date)
-        @date
-        end
-    def venue
-        @venue
-        end    
+    end   
+   
 end
+
+th = Ticket.new("Mango")
+puts "#{th.venue}"
