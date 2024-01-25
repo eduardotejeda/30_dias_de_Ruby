@@ -48,8 +48,30 @@ class Ticket
     def initialize(venue)        
         @venue = venue        
     end   
+
+    def venue
+        @venue
+    end
+
+    def set_date=(fecha)
+        @date = fecha
+    end
+    def date 
+        @date 
+    end
+    
+    def year=(y)
+        year, month, day = y.split('-')
+        self.year = @year
+    end
+    def year
+        @year
+    end
    
 end
 
-th = Ticket.new("Mango")
-puts "#{th.venue}"
+ticket = Ticket.new("Mango")
+ticket.set_date = "2013-11-12"
+ticket.year = "2013-11-12"
+puts "#{ticket.venue} #{ticket.date} #{ticket.year}"
+
