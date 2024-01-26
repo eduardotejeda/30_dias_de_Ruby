@@ -45,6 +45,8 @@
 
 
 class Ticket
+    attr_accessor :year
+
     def initialize(venue)        
         @venue = venue        
     end   
@@ -60,18 +62,16 @@ class Ticket
         @date 
     end
     
-    def year=(y)
+    def year(y)
         year, month, day = y.split('-')
-        self.year = @year
+        self.year = year.to_i
     end
-    def year
-        @year
-    end
+    
    
 end
 
 ticket = Ticket.new("Mango")
 ticket.set_date = "2013-11-12"
-ticket.year = "2013-11-12"
-puts "#{ticket.venue} #{ticket.date} #{ticket.year}"
+#ticket.year("2013-11-12")
+puts "#{ticket.year("2013-11-12")}"
 
