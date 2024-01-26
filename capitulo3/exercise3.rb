@@ -45,8 +45,6 @@
 
 
 class Ticket
-    attr_accessor :year
-
     def initialize(venue)        
         @venue = venue        
     end   
@@ -55,23 +53,32 @@ class Ticket
         @venue
     end
 
-    def set_date=(fecha)
-        @date = fecha
-    end
-    def date 
-        @date 
-    end
+    # Expresión regular /\A\d{4}-\d{2}-\d{2}\z/ para asegurarse de que la fecha tenga el formato 'yyyy-mm-dd'
+          
+    def date=(y)
+        if /\A\d{4}-\d{2}-\d{2}\z/.match?(y)
+          @date = y
+        else
+          puts "Please submit the date in the format 'yyyy-mm-dd'"
+        end
+      end 
     
-    def year(y)
-        year, month, day = y.split('-')
-        self.year = year.to_i
+    def date
+        @date
     end
-    
    
 end
 
-ticket = Ticket.new("Mango")
-ticket.set_date = "2013-11-12"
-#ticket.year("2013-11-12")
-puts "#{ticket.year("2013-11-12")}"
+ticket = Ticket.new("Town Hall")
+ticket.date=("2013-11-12")
+puts ticket.date
+
+#puts "#{ticket.date=("2013-11-12")}"
+
+# if y.length > 8        
+        # year, month, day = y.split('-')
+        # year = year.to_i   
+        # else
+        # puts "Please submit the date in the format 'yyyy-mm-dd'"
+        # end  
 
