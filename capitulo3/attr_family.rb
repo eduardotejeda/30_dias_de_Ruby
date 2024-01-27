@@ -13,7 +13,8 @@ def price=(price)
 
 #atrr_accessor creates reader and writer methods
 attr_accessor :price is equivalent to
-def price=(price)
+def price=(price)5
+
     @price = price
     end
     def price
