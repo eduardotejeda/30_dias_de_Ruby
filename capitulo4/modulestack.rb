@@ -9,3 +9,4 @@ module Stacklike
         stack.pop
     end
 end
+
