@@ -1,5 +1,5 @@
 module Stacklike
-    def Stacklike
+    def stack
         @stack ||= []
     end
     def add_to_stack(obj)
